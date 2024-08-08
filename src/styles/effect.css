@@ -1,0 +1,11 @@
+.main_div {
+  height: 100vh;
+  background: lightgrey;
+  color: aliceblue;
+  width: 100%;
+}
+.main_div h3 {
+  color: darkgray;
+  text-align: center;
+  align-items: center;
+}

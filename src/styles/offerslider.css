@@ -1,0 +1,51 @@
+.coupens {
+  height: 100px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  cursor: pointer;
+}
+
+.coupen {
+  height: auto;
+  min-width: 300px;
+  border-radius: 20px;
+  border: 1px solid gray;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+.coupen img {
+  height: 30px;
+  width: 30px;
+}
+.texts {
+  height: auto;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.texts p:nth-child(1) {
+  font-size: 20px;
+  font-weight: 700;
+}
+.texts p:nth-child(2) {
+  font-size: 14px;
+  font-weight: 700;
+  color: lightgray;
+}
+
+.descpop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+}

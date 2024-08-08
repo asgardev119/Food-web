@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.rootCart {
+  width: 90%;
+  height: auto;
+  margin: auto;
+}
+
+.rootCart h3{
+    text-align: center;
+}

@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.root {
+  height: 100vh;
+  background-color: aqua;
+  background-image: url("https://cdn.pixabay.com/photo/2017/06/29/07/42/hamburger-2453359_1280.jpg");
+  background-size: cover;
+  font-family: "Paytone One", sans-serif;
+}
+.main {
+  margin: 60px auto auto 50px;
+  position: absolute;
+  width: 600px;
+}
+
+h1 {
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(255, 255, 0, 0.967);
+  font-size: 110px;
+  line-height: 100px;
+}
+
+Span {
+  color: yellow;
+  text-shadow: 0 0 10px red, 0 0 15px yellow;
+}
+.main p {
+  color: yellowgreen;
+  font-size: 20px;
+  text-shadow: 0 0 10px black;
+  font-family: "Paytone One", sans-serif;
+  width: 300px;
+  line-height: 30px;
+  margin-top: 20px;
+}
+.main button {
+  height: 40px;
+  width: 200px;
+  background-color: #fff;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  position: absolute;
+  box-shadow: 0 0 20px 10px rgb(202, 239, 129);
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.main button:hover {
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+  background-color: black;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}

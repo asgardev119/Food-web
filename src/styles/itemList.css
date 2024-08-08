@@ -1,0 +1,49 @@
+.list {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid lightgray;
+}
+
+.infolist {
+  height: 40px;
+  width: 70%;
+  text-align: start;
+  align-items: center;
+  font-size: 12px;
+}
+
+.imgbtn {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.imgbtn img {
+  height: 140px;
+  width: 150px;
+  border-radius: 10px;
+}
+.imgbtn button {
+  height: 40px;
+  background: #fff;
+  color: darkgreen;
+  width: 120px;
+  margin: auto;
+  border-radius: 10px;
+  border: none;
+  position: absolute;
+  margin: 120px 0 0 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.imgbtn button:hover {
+  background-color: lightgray;
+}

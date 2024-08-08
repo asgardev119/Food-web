@@ -1,0 +1,28 @@
+.root {
+  height: auto;
+  width: 500px;
+  border-radius: 10px;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 5px 10px 50px black;
+}
+
+.root header h3 {
+  text-align: start;
+  margin: 0;
+  font-size: 18px;
+}
+.root h3 {
+  text-align: start;
+  margin: 0;
+  font-size: 18px;
+}
+.root h2{
+  text-align: end;
+  cursor: pointer;
+}
+ul {
+  padding: 10px;
+  display: grid;
+  justify-content: left;
+}
