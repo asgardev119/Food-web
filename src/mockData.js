@@ -72,8 +72,8 @@ export const dashboardApi =
 export const menuApi =
   "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9715987&lng=77.5945627&restaurantId=";
 
-// 458980
 
-//"https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9715987&lng=77.5945627&restaurantId=440123&catalog_qa=undefined&submitAction=ENTER"
 
-//NM-old : //"https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=trDealsue&lat=25.59080&lng=85.13480&restaurantId=";
+ // https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Pizzas.png
+
+  //                                                                                    MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Biryani.png

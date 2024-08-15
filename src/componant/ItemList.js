@@ -9,7 +9,6 @@ export const ItemList = ({ items }) => {
 
   const handleAdd = (item) => {
     dispatch(addItem(item));
-    console.log(item);
   };
 
   return (

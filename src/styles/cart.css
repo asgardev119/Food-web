@@ -4,11 +4,26 @@
 }
 
 .rootCart {
-  width: 90%;
+  width: 70%;
   height: auto;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .rootCart h3{
     text-align: center;
+}
+
+.rootCart button{
+  height: 30px;
+  width: 120px;
+  margin: auto;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid grey;
+  cursor: pointer;
+  margin-top: 10px;
+  
 }

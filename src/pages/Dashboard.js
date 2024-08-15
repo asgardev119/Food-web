@@ -5,10 +5,14 @@ import { itemList } from "../mockData";
 import { Effect } from "../componant/Effect";
 import { Link } from "react-router-dom";
 import { dashboardApi } from "../mockData";
+import { NavHeader } from "../componant/NavHeader";
+import { NearResturant } from "../componant/NearResturant";
 
 export const Dashboard = () => {
   const [resData, setResData] = useState([]);
   const [inputValue, setInputValue] = useState("");
+  const [navListItem, setNavListItem] = useState([]);
+  const [nearRestaurent, setNearRestaurent] = useState([]);
 
   const onHandleChange = (e) => {
     setInputValue(e.target.value);
@@ -16,8 +20,6 @@ export const Dashboard = () => {
     const searchData = resData.filter((obj) => {
       return obj.info.name.toLowerCase().includes(inputValue.toLowerCase());
     });
-
-    console.log("search data: ", searchData);
 
     if (searchData.length > 0) {
       setResData(searchData);
@@ -33,8 +35,11 @@ export const Dashboard = () => {
     const resMockData =
       jsonvalue?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants;
-    console.log(resMockData, "resMockData----");
 
+    const navheaderList = jsonvalue?.data?.cards[0];
+    setNavListItem(navheaderList || []);
+    const nearestTopRestaurent = jsonvalue?.data?.cards[1];
+    setNearRestaurent(nearestTopRestaurent || []);
     setResData(resMockData || []);
   };
 
@@ -46,6 +51,9 @@ export const Dashboard = () => {
 
   return (
     <>
+      <NavHeader navListItem={navListItem} />
+      <NearResturant nearRestaurent={nearRestaurent} />
+
       <div className="searchBar">
         <button
           className="btn"

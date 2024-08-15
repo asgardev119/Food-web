@@ -1,0 +1,39 @@
+.rootNav {
+  height: auto;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  margin: auto;
+}
+.navBox {
+  height: 180px;
+  min-width: 144px;
+  text-align: center;
+  align-items: center;
+}
+
+.navProduct{
+  height: 180px;
+  min-width: 144px;
+  text-align: center;
+  align-items: center;
+}
+.navBox small {
+  color: green;
+}
+
+.navHeaderRoot h2 {
+  text-align: left;
+  margin-left: 150px;
+  
+}
+
+.navHeaderRoot{
+  margin-top: 20px;
+
+}

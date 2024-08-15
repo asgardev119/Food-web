@@ -15,7 +15,7 @@ export const RestaurentMenu = () => {
     const json = await data.json();
     setMenuList(json.data);
   };
-  // console.log("menuList----------->", menuList);
+  
 
   useEffect(() => {
     fetchMenu();
@@ -41,20 +41,20 @@ export const RestaurentMenu = () => {
     feeDetails,
   } = menuList?.cards[2]?.card?.card?.info || {};
 
-  // const { itemCards, title } =
-  //   menuList?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
-  //     ?.card || {};
 
-  const { offers } =
-    menuList?.cards[3]?.card?.card?.gridElements?.infoWithStyle;
+
+   
 
   const categoriesList =
-    menuList?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+    menuList?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+      // most error -> cards[4] || cards[5]
       (c) =>
         c.card?.["card"]?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
-    );
-  // console.log(categories, "---------categories");
+    ) || [];
+
+  const { offers } =  menuList?.cards[3]?.card?.card?.gridElements?.infoWithStyle;
+
 
   return (
     <div className="menu-Container">

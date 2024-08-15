@@ -14,7 +14,7 @@ export const OfferSlider = ({ offers }) => {
     <div className="coupens">
       {offers.map((obj, i) => {
         return (
-          <div className="coupen" key={i} onClick={handleChange}>
+          <div className="coupen" key={obj.info.id} onClick={handleChange}>
             <img src={imagesApi + obj.info.offerLogo} />
             <div className="texts">
               <p>{obj.info.header}</p>
