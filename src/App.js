@@ -1,13 +1,6 @@
 import { Dashboard } from "./pages/Dashboard";
 import "./App.css";
-import {
-  BrowserRouter,
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Routes,
-  useParams,
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./pages/login";
 import Header from "./componant/Header";
 import { Cart } from "./componant/Cart";
@@ -18,6 +11,7 @@ import { useEffect, useState } from "react";
 import Usercontaxt from "./utils/Usercontax";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
+import { SearchItem } from "./pages/SearchItem";
 
 function App() {
   const [userName, setUserName] = useState();
@@ -42,6 +36,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/search" element={<SearchItem />} />
               <Route
                 path="/restaurentmenu/:resId"
                 element={<RestaurentMenu />}

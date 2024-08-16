@@ -43,6 +43,7 @@ nav ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-align: center;
   gap: 20px;
 }
 
@@ -51,6 +52,7 @@ ul li a {
   color: black;
   cursor: pointer;
   font-weight: 500;
+  align-items: center;
 }
 
 nav button {

@@ -10,6 +10,7 @@
   margin-top: 20px;
   overflow: hidden;
   position: relative;
+  
 }
 
 .card:hover {
@@ -22,9 +23,7 @@
   height: 130px;
   width: 200px;
   border-radius: 15px;
-  background-position: center;
-  background-size: cover;
-  background-clip: inherit;
+  
 }
 
 .card p {

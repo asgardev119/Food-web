@@ -1,8 +1,7 @@
 import "../styles/header.css";
 import React, { useState } from "react";
 import { AiOutlineBars, AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
-import { TiShoppingCart } from "react-icons/ti";
-import { IoCartOutline } from "react-icons/io5";
+import { FaSearch } from "react-icons/fa";
 import { FaShoppingCart, FaUserAlt } from "react-icons/fa";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useContext } from "react";
@@ -44,8 +43,11 @@ const Header = () => {
             <li>
               <NavLink to="/cart">Cart({cartItem.length}) </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to="#">{user.initialName} </NavLink>
+            </li> */}
+            <li>
+              <NavLink to="/search">Search</NavLink>
             </li>
           </ul>
           <button onClick={onChange}>{btnName}</button>

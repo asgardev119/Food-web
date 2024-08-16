@@ -9,6 +9,8 @@
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
   margin: auto;
+  border-bottom: 2px solid grey;
+
 }
 .navBox {
   height: 180px;
@@ -35,5 +37,6 @@
 
 .navHeaderRoot{
   margin-top: 20px;
+
 
 }

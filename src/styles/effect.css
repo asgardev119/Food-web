@@ -1,11 +1,15 @@
 .main_div {
-  height: 100vh;
-  background: lightgrey;
-  color: aliceblue;
+  height: 80vh;
+  background: aliceblue;
   width: 100%;
-}
-.main_div h3 {
-  color: darkgray;
-  text-align: center;
+  display: flex;
+  justify-content: center;
   align-items: center;
+
+}
+.main_div h1 {
+  align-items: center;
+  color: rgb(119, 115, 115);
+  text-align: center;
+ 
 }

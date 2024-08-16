@@ -4,7 +4,7 @@ import "../styles/effect.css";
 export const Effect = () => {
   return (
     <div className="main_div">
-      <h3>Wait......</h3>
+      <h1>LOADING......</h1>
     </div>
   );
 };
