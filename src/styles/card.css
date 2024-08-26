@@ -10,20 +10,17 @@
   margin-top: 20px;
   overflow: hidden;
   position: relative;
-  
 }
 
 .card:hover {
   scale: 0.9;
   animation-duration: 0.9s;
-
 }
 
 .card img {
   height: 130px;
   width: 200px;
   border-radius: 15px;
-  
 }
 
 .card p {

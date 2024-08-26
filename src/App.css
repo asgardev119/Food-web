@@ -1,6 +1,30 @@
 .app {
   height: auto;
   width: 100%;
-  margin-top:  80px;
+  margin-top: 80px;
   /* column-gap: 40px; */
 }
+
+/* 
+const [userName, setUserName] = useState();
+
+  useEffect(() => {
+    const data = {
+      fullName: "Asgar Ansari",
+    };
+    setUserName(data.fullName);
+  }, []); */
+
+/* <Usercontaxt.Provider value={{ initialName: userName, setUserName }}> */
+
+/* </Usercontaxt.Provider> */
+
+/*             
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/search" element={<SearchItem />} />
+            <Route path="/restaurentmenu/:resId" element={<RestaurentMenu />} /> */

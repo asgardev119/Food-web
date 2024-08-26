@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { addItem } from "../utils/cartSlice";
 import { ItemList } from "./ItemList";
 
-export const Categories = ({ data }) => {
+export const Categories = ({ data}) => {
   const [open, setOpen] = useState(false);
   const [names, setName] = useState(true);
 
@@ -18,7 +18,6 @@ export const Categories = ({ data }) => {
     }
   };
 
- 
   return (
     <div className="menulists">
       <div className="openlist" onClick={showList}>
@@ -30,7 +29,7 @@ export const Categories = ({ data }) => {
 
       {open && (
         <div>
-          <ItemList items={data.itemCards} />
+          <ItemList items={data.itemCards}  />
         </div>
       )}
     </div>

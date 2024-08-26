@@ -15,7 +15,6 @@ export const RestaurentMenu = () => {
     const json = await data.json();
     setMenuList(json.data);
   };
-  
 
   useEffect(() => {
     fetchMenu();
@@ -41,10 +40,6 @@ export const RestaurentMenu = () => {
     feeDetails,
   } = menuList?.cards[2]?.card?.card?.info || {};
 
-
-
-   
-
   const categoriesList =
     menuList?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       // most error -> cards[4] || cards[5]
@@ -53,8 +48,8 @@ export const RestaurentMenu = () => {
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     ) || [];
 
-  const { offers } =  menuList?.cards[3]?.card?.card?.gridElements?.infoWithStyle;
-
+  const { offers } =
+    menuList?.cards[3]?.card?.card?.gridElements?.infoWithStyle;
 
   return (
     <div className="menu-Container">
@@ -77,7 +72,11 @@ export const RestaurentMenu = () => {
       <h3> Deals for you</h3>
       <OfferSlider offers={offers} />
       {categoriesList.map((category, i) => (
-        <Categories data={category?.card?.card} key={i} />
+        <Categories
+          data={category?.card?.card}
+          key={i}
+         
+        />
       ))}
     </div>
   );

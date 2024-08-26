@@ -43,7 +43,9 @@ export const Dashboard = () => {
         <button
           className="btn"
           onClick={() => {
-            const filterData = resData.filter((obj) => obj.info.avgRating > 4.2);
+            const filterData = resData.filter(
+              (obj) => obj.info.avgRating > 4.2
+            );
             setResData(filterData);
           }}
         >
@@ -58,7 +60,7 @@ export const Dashboard = () => {
       <div className="container">
         {resData.map((obj) => {
           return (
-            <Link to={"restaurentmenu/" + obj.info.id}>
+            <Link to={`/restaurentmenu/${obj.info.id}`}>
               <Card obj={obj} />
             </Link>
           );

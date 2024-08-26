@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/itemList.css";
 import { imagesApi } from "../mockData";
 import { useDispatch } from "react-redux";
 import { addItem } from "../utils/cartSlice";
+import Usercontaxt from "../utils/Usercontax";
 
 export const ItemList = ({ items }) => {
-  const dispatch = useDispatch();
+  // const isLogged = useContext(Usercontaxt);
 
+  const dispatch = useDispatch();
   const handleAdd = (item) => {
     dispatch(addItem(item));
   };

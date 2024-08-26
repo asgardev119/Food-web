@@ -1,36 +1,44 @@
 import "../styles/header.css";
-import React, { useState } from "react";
-import { AiOutlineBars, AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
-import { FaSearch } from "react-icons/fa";
-import { FaShoppingCart, FaUserAlt } from "react-icons/fa";
+import React, { useEffect, useState } from "react";
+import { FiUser } from "react-icons/fi";
+import { FiSearch } from "react-icons/fi";
+import { IoMdHelpBuoy } from "react-icons/io";
+import { BsMinecart } from "react-icons/bs";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import Usercontaxt from "../utils/Usercontax";
 import { useSelector } from "react-redux";
+import { Cart } from "./Cart";
 
-const Header = () => {
-  const [btnName, setBtnName] = useState("Login");
-  const navigate = useNavigate();
+const Header = ({ isLoggedIn }) => {
+  const [showComponent, setShowComponent] = useState(false);
 
-  const user = useContext(Usercontaxt);
+  const handleMouseOver = () => {
+    setShowComponent(true);
+  };
+
+  const handleMouseOut = () => {
+    setShowComponent(false);
+  };
+
+  // const user = useContext(Usercontaxt);
+
   const cartItem = useSelector((store) => store.cart.items);
 
-  const onChange = () => {
-    if (btnName == "Login") {
-      navigate("/login");
-      setBtnName("Logout");
-    } else {
-      setBtnName("Login");
-      navigate("/");
+  const [storedUser, setStoredUser] = useState(null);
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("userSignIn");
+    if (storedUser) {
+      setStoredUser(JSON.parse(storedUser));
     }
-  };
+  }, []);
 
   return (
     <div className="headerRoot">
       <header className="header">
         <div className="logo">
-          {" "}
-          <NavLink to="/">Foodies </NavLink>
+          <NavLink to="/">👉-food </NavLink>
         </div>
         <nav>
           <ul>
@@ -38,19 +46,50 @@ const Header = () => {
               <NavLink to="/about">About Us </NavLink>
             </li>
             <li>
-              <NavLink to="/contact">contact </NavLink>
+              <NavLink to="/contact">
+                {" "}
+                <IoMdHelpBuoy />
+                Help{" "}
+              </NavLink>
             </li>
+
             <li>
-              <NavLink to="/cart">Cart({cartItem.length}) </NavLink>
+              <NavLink to="/search">
+                {" "}
+                <FiSearch />
+                Search
+              </NavLink>
             </li>
-            {/* <li>
-              <NavLink to="#">{user.initialName} </NavLink>
-            </li> */}
+
             <li>
-              <NavLink to="/search">Search</NavLink>
+              <NavLink
+                to="/cart"
+                onMouseOver={handleMouseOver}
+                onMouseOut={handleMouseOut}
+              >
+                <BsMinecart />
+                <small> {cartItem.length} </small>Cart
+              </NavLink>
+            </li>
+
+            {showComponent && (
+              <div className="subCart">
+                <Cart />
+              </div>
+            )}
+
+            <li>
+              {isLoggedIn ? (
+                <NavLink to="/userprofile">
+                  {storedUser && storedUser.name}
+                </NavLink>
+              ) : (
+                <NavLink to="/signin">
+                  <FiUser /> Sign in
+                </NavLink>
+              )}
             </li>
           </ul>
-          <button onClick={onChange}>{btnName}</button>
         </nav>
       </header>
     </div>

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export const NavHeader = ({ navListItem }) => {
   const { title } = navListItem.card.card.header;
   const { info } = navListItem.card.card.imageGridCards;
-  console.log("info", info);
+  // console.log("info", info);
   return (
     <div className="navHeaderRoot">
       <h2>{title}</h2>

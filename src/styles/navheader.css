@@ -9,7 +9,8 @@
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
   margin: auto;
-  border-bottom: 2px solid grey;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 40px;
 
 }
 .navBox {
