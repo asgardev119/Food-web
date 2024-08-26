@@ -38,7 +38,7 @@ const Header = ({ isLoggedIn }) => {
     <div className="headerRoot">
       <header className="header">
         <div className="logo">
-          <NavLink to="/">👉-food </NavLink>
+          <NavLink to="/">Food </NavLink>
         </div>
         <nav>
           <ul>
