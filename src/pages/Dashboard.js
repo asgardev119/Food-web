@@ -13,7 +13,9 @@ export const Dashboard = () => {
   const [nearRestaurent, setNearRestaurent] = useState([]);
 
   const fetchData = async () => {
-    const data = await fetch(dashboardApi);
+    const data = await fetch(dashboardApi, {
+      method: "GET",
+    });
     const jsonvalue = await data.json();
 
     const resMockData =
@@ -27,6 +29,8 @@ export const Dashboard = () => {
     setNearRestaurent(nearestTopRestaurent || []);
     setResData(resMockData || []);
   };
+
+ 
 
   useEffect(() => {
     fetchData();
@@ -60,7 +64,7 @@ export const Dashboard = () => {
       <div className="container">
         {resData.map((obj) => {
           return (
-            <Link to={`/restaurentmenu/${obj.info.id}`}>
+            <Link to={`/restaurentmenu/${obj.info.id}`} key={obj.info.id}>
               <Card obj={obj} />
             </Link>
           );

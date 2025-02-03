@@ -4,9 +4,8 @@ import { FiUser } from "react-icons/fi";
 import { FiSearch } from "react-icons/fi";
 import { IoMdHelpBuoy } from "react-icons/io";
 import { BsMinecart } from "react-icons/bs";
-import { NavLink, useNavigate } from "react-router-dom";
-import { useContext } from "react";
-import Usercontaxt from "../utils/Usercontax";
+import { NavLink } from "react-router-dom";
+
 import { useSelector } from "react-redux";
 import { Cart } from "./Cart";
 
@@ -21,7 +20,6 @@ const Header = ({ isLoggedIn }) => {
     setShowComponent(false);
   };
 
-  // const user = useContext(Usercontaxt);
 
   const cartItem = useSelector((store) => store.cart.items);
 

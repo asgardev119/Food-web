@@ -1,34 +1,23 @@
 import { Dashboard } from "./pages/Dashboard";
 import "./App.css";
-import {
-  BrowserRouter,
-  Navigate,
-  Route,
-  Routes,
-  useParams,
-} from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import SignIn from "./pages/SignIn";
 import Header from "./componant/Header";
 import { Cart } from "./componant/Cart";
 import Contact from "./componant/Contact";
 import { About } from "./componant/About";
 import { RestaurentMenu } from "./componant/RestaurentMenu";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Usercontaxt from "./utils/Usercontax";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import { SearchItem } from "./pages/SearchItem";
 import { SignUp } from "./componant/SignUp";
 import { Userprofile } from "./componant/Userprofile";
-import { invalidPath } from "./pages/invalidPath";
+import { InvalidPath } from "./pages/invalidPath";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const location = useParams();
-  // const validRoutes = ["/home", "/about", "/contact"];
-  // if (!validRoutes.includes(location.path )) {
-  //   return <h1>wront url</h1>;
-  // }
-  console.log(location);
+
   return (
     <div className="app">
       <BrowserRouter>
@@ -41,7 +30,11 @@ function App() {
               <Route
                 path="/dashboard"
                 element={
-                  isLoggedIn ? <Dashboard /> : <Navigate to="/signup" replace />
+                  isLoggedIn ? (
+                    <Dashboard key="dashboard" />
+                  ) : (
+                    <Navigate to="/signup" replace />
+                  )
                 }
               />
               <Route
@@ -72,8 +65,17 @@ function App() {
                 path="/restaurentmenu/:resId"
                 element={<RestaurentMenu />}
               />
-              <Route path="/userprofile" element={<Userprofile />} />
-              <Route path="/**" element={<invalidPath />} />
+              <Route
+                path="/userprofile"
+                element={
+                  isLoggedIn ? (
+                    <Userprofile />
+                  ) : (
+                    <Navigate to="/signup" replace />
+                  )
+                }
+              />
+              <Route path="*" element={<InvalidPath />} />
             </Routes>
           </Provider>
         </Usercontaxt.Provider>
