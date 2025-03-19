@@ -33,20 +33,20 @@ function App() {
                   isLoggedIn ? (
                     <Dashboard key="dashboard" />
                   ) : (
-                    <Navigate to="/signup" replace />
+                    <Navigate to="/signin" replace />
                   )
                 }
               />
               <Route
                 path="/about"
                 element={
-                  isLoggedIn ? <About /> : <Navigate to="/signup" replace />
+                  <About /> 
                 }
               />
               <Route
                 path="/contact"
                 element={
-                  isLoggedIn ? <Contact /> : <Navigate to="/signup" replace />
+                  <Contact /> 
                 }
               />
               <Route
@@ -55,9 +55,9 @@ function App() {
                   isLoggedIn ? <Cart /> : <Navigate to="/signup" replace />
                 }
               />
-              <Route path="/signin" element={<SignIn />} />
+              <Route path="/signup" element={<SignIn />} />
               <Route
-                path="/signup"
+                path="/signin"
                 element={<SignUp setIsLoggedIn={setIsLoggedIn} />}
               />
               <Route path="/search" element={<SearchItem />} />
@@ -71,7 +71,7 @@ function App() {
                   isLoggedIn ? (
                     <Userprofile />
                   ) : (
-                    <Navigate to="/signup" replace />
+                    <Navigate to="/signin" replace />
                   )
                 }
               />

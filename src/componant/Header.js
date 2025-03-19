@@ -83,7 +83,7 @@ const Header = ({ isLoggedIn }) => {
                 </NavLink>
               ) : (
                 <NavLink to="/signin">
-                  <FiUser /> Sign in
+                  <FiUser /> sign In
                 </NavLink>
               )}
             </li>

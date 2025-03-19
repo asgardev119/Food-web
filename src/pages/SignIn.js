@@ -107,10 +107,10 @@ const SignIn = () => {
         <small>{error && error.password}</small>
 
         <button type="submit" onClick={handleClick}>
-          SignIn
+          SignUp
         </button>
         <p>
-          Already signin Click here 👉 <Link to="/signup">Sign Up</Link>
+          Already signin Click here 👉 <Link to="/signin">Sign In</Link>
         </p>
       </form>
     </div>

@@ -103,10 +103,10 @@ export const SignUp = ({ setIsLoggedIn }) => {
         <small> {error && error.cred}</small>
 
         <button type="submit" onClick={handleClick}>
-          SignUp
+          SignIn
         </button>
         <p>
-          Create New Profile Click here 👉 <Link to="/signin">Sign In</Link>
+          Create New Profile Click here 👉 <Link to="/signup">sign up</Link>
         </p>
       </form>
     </div>
